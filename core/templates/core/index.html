@@ -1,0 +1,30 @@
+{% extends "base.html" %} 
+
+{% block content %}
+
+<div class='text-center aaa'>
+    <h1>Covid 19 Detector</h1>
+    <br>
+    <h6>upload a chest x-ray image of a human to find out if the patient is COVID-19 affected or not</h6>
+    <br>
+    <form id="upload-file" method="POST" enctype="multipart/form-data" action="{% url 'predict' %}">
+        {% csrf_token %}
+        <label for="imageUpload" class="upload-label">
+            upload Chest X-Ray Image
+        </label>
+        <input type="file" name="file" id="imageUpload" accept=".png, .jpg, .jpeg">
+        <br><br>
+        <div class="image-section">
+            <div class="img-preview">
+                <div id="imagePreview">
+                </div>
+            </div>
+            <div>
+            <br><br>
+                <button type="submit" class="btn btn-primary btn-md " id="btn-predict">Predict</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+{% endblock %}
