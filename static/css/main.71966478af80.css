@@ -1,0 +1,37 @@
+.container {
+    margin-top: 5%;
+}
+
+.img-preview>div {
+    height: 400px;
+    background-size: 420px 420px;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    margin-bottom: 2px;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.upload-label{
+    display: inline-block;
+    padding: 12px 30px;
+    background: #1e3631;
+    color: #fff;
+    font-size: 1em;
+    transition: all .4s;
+    cursor: pointer;
+}
+
+.upload-label:hover{
+    background: #3f7cb9;
+    color: #dbf3ee;
+}
+
+#img {
+    height: 400px;
+    background-size: 420px 420px;
+    margin-bottom: 2px;
+}
